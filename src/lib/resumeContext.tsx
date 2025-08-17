@@ -1,7 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState, ReactNode } from 'react';
-import { Resume, PersonalInfo, SkillCategory, WorkExperience, Education, Project } from '@/types/resume';
+import { Resume, PersonalInfo, SkillCategory, WorkExperience, Education, Project } from '@/types/types';
 
 interface ResumeContextType {
   resume: Resume;
@@ -16,12 +16,13 @@ interface ResumeContextType {
 const defaultResume: Resume = {
   id: '',
   personalInfo: {
-    fullName: '',
+    firstName: '',
+    lastName:'',
     email: '',
     phone: '',
     location: '',
     website: '',
-    linkedin: '',
+    linkedIn: '',
     github: '',
     additionalInfo: []
   },
